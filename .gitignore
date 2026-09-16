@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# local runtime data (timeline db, settings, screenshots temp)
+data/
+
+# probe scratch output
+docs/research/_probe*_out.txt
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# e2e sandbox repo (has its own .git, not part of the product)
+agentpet-e2e-workspace/
