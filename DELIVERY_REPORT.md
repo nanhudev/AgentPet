@@ -40,11 +40,13 @@ unit + integration: **69 passed** ✓（pytest 7.9s）｜ e2e(replay/sim): ✓ �
 ## PERFORMANCE（实测）
 空闲 CPU ≈ **0%**（归一化）｜ RSS ≈ **9 MB** ｜ 脏矩形重绘 + 字体缓存 + 粒子上限 48 + 空闲 160ms 定时
 
-## GITHUB — 已推送 ✅
-- **私有仓库：https://github.com/nanhudev/AgentPet**（private，10 个提交，`master`）
-- 远端 `origin` 已配置并已建立上游跟踪（`master...origin/master`），后续直接 `git push` / `git pull`
-- 推送路径说明：GitHub 连接器（MCP）只有只读权限（建仓库 403），改用本机 **Git Credential Manager** 中已存的 `git:https://github.com` 令牌完成建仓 + 推送；令牌仅在脚本内使用、未落盘（临时文件已删除，`.git/config` 已确认无令牌残留）
-- 提交链：`ba7ac42` bootstrap → `24eea21` event core → `4499228` adapter → `a797853` behavior → `ad36ca9` overlay → `10e2f33` tests → `b28ee43`/`fb52497` docs → `2d00924` avoidance → `b86b9da` soak
+## GITHUB — 已公开 ✅
+- **公开仓库：https://github.com/nanhudev/AgentPet**（public，`master`）
+- 历史：公开前已脱敏——34 张含个人桌面内容的整屏截图、env_audit.json、wb_surface.json、含本机路径的 probe/audit 脚本已全部移出 Git 历史（压缩为单一根提交 `ac7f3a5` 并强推；原件归档在本地 `data/private_archive/`，被 .gitignore 排除）
+- 仓库内截图只保留 `*_overlay_raw.png`（Overlay 层自渲染，无桌面背景），README 已内嵌展示图
+- 残余风险（诚实记录）：旧提交在强推后仍可按精确 SHA 访问（GitHub 悬挂对象 GC 前的缓存行为），但这些 SHA 从未公开暴露过，风险可忽略；若要彻底清除需网页端删除仓库重建（GCM 令牌无 delete_repo 权限）
+- 远端 `origin` 已配置并建上游跟踪，后续直接 `git push` / `git pull`
+- License：README 标注 TBD，公开发布前建议补 LICENSE 文件（如 MIT）
 
 ## SCREENSHOTS
 `docs\testing\screenshots\*_overlay_raw.png`（Overlay 层自渲染，无桌面背景；桌面整屏截图因含个人内容不入库，本地归档在 data/private_archive/）
